@@ -1,34 +1,40 @@
-\documentclass[a4paper]{slides}
+\documentclass[a4paper]{article}
 
 \title{My First Document}
-\date{2019/11/10}
+\date{\today}
 \author{Jim Hessin}
 
 \usepackage{amsmath}
+\usepackage{csquotes}
 
 \begin{document}
 % Example 1
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\section{Example 1}
 \ldots when Einstein introduced his formula
-\begin{equation}
-e = m \cdot c^2 \; ,
-\end{equation}
+$e = m \cdot c^2$,
 which is at the same time the most widely known
 and the least well understood physical formula.
-% Example 2
+
+\section{Example 2}
 \ldots from which follows Kirchhoff's current law:
-\begin{equation}
-\sum_{k=1}^{n} I_k = 0 \; .
-\end{equation}
+$\sum_{k=1}^{n} I_k = 0$.
+
 Kirchhoff's voltage law can be derived \ldots
 
-% Example 3
+\section{Example 3}
 \ldots which has several advantages.
-\begin{equation}
-I_D = I_F - I_R
-\end{equation}
+$I_D = I_F - I_R$
 
-is the core of a very different transistor model.\\
+is the core of a very different transistor model.
 \ldots
+
+\section{Special Symbols}
+\enquote{It's $-30\,^{\circ}\mathrm{C}$ outside. }
 %   \pagenumbering{gobble}
 %   \maketitle
 %   \newpage
