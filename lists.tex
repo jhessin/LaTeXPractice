@@ -1,0 +1,98 @@
+\documentclass[letterpaper,12pt]{article}
+
+% PREAMBLE
+\usepackage[utf8]{inputenc}
+\usepackage[inline]{enumitem}
+
+\title{Lists in Latex}
+\author{Jim Hessin}
+\date{December  1, 2019}
+% -- END PREAMBLE
+
+\begin{document}
+\maketitle
+
+\section{Lists in Latex}
+There are three environments which can be used to show lists
+
+\subsection{The itemize Environment}
+
+A list with set left margin
+\begin{itemize}[leftmargin=3in]
+  \item The first item in the list
+  \item The second item in the list
+  \item The third item in the list
+\end{itemize}
+A list with a \ast{} marker
+
+\begin{itemize}[label=$\ast$]
+  \item The first item in the list
+  \item The second item in the list
+  \item The third item in the list
+\end{itemize}
+A list with a \star{} marker
+
+\begin{itemize}[label=$\star$]
+  \item The first item in the list
+  \item The second item in the list
+  \item The third item in the list
+\end{itemize}
+
+\subsection{The enumerate Environment}
+
+Standard
+\begin{enumerate}[]
+  \item The first item
+  \item The second item
+  \item The third item
+\end{enumerate}
+
+Alphanumeric numbering
+\begin{enumerate}[label=\alph*)]
+  \item The first item
+  \item The second item
+  \item The third item
+\end{enumerate}
+
+roman numerals
+\begin{enumerate}[label=\roman*)]
+  \item The first item
+  \item The second item
+  \item The third item
+\end{enumerate}
+
+Roman Numerals
+\begin{enumerate}[label=\fbox{\Roman*}]
+  \item The first item
+  \item The second item
+  \item The third item
+\end{enumerate}
+
+Lists can be split as well
+\begin{enumerate}[resume*]
+  \item The fourth item
+  \item The fifth item
+  \item The sixth item
+\end{enumerate}
+
+\subsubsection{The Horizontal List}
+\begin{enumerate*}
+  \item The first item
+  \item The second item
+  \item The third item
+\end{enumerate*}
+
+Different symbols in a list
+\begin{enumerate}
+  \item [$-$] The first item
+  \item [$\ast$] The second item
+  \item [$\star$] The last item
+\end{enumerate}
+
+\subsection{The Description Environment}
+\begin{description}
+  \item[First] The description of the first item
+  \item[Second] The description of the second item
+  \item[Last] The description of the last item
+\end{description}
+\end{document}
