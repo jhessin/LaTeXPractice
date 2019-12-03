@@ -1,26 +1,49 @@
-\documentclass{book}
+\documentclass[]{book}
+
+% PREAMBLE
+\usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
-\usepackage[hmarginratio=1:1]{geometry}
+% \usepackage[hmarginratio=1:1]{geometry}
+
 \pagestyle{fancy}
+
+% In the following this is the meaning of these characters
+
+% E - Even pages
+% O - Odd pages
+
+% L - Left field
+% R - Right field
+% C - center field
+
+% H - Header
+% F - Footer
+
 %\fancyhf{} %clear head and footer fields
 \fancyhead{} % clear all fields
-%\lhead{This is Left side of my header}
-%\chead{Tahir}
-%\rhead{Right of head}
-\fancyfoot{}
-%\lfoot{Left of footer}
-%\cfoot{Middle}
-%\rfoot{Right field of footer}
-\fancyhead[CO]{ODD}
-\fancyhead[CE]{Even}
+\fancyhead[LO,RE]{\thepage}
+% \lhead{This is Left side of my header}
+\chead{Hessin}
+% \rhead{Right of head}
 
-\rfoot{\thepage}
+\fancyfoot{} % clear all fields
+% \lfoot{Left of footer}
+\cfoot{Hessin}
+% \rfoot{Right field of footer}
 \renewcommand{\footrulewidth}{0.5pt}
-\renewcommand{\headrulewidth}{2.5pt}
+
+%\fancyhead[CO]{ODD}
+%\fancyhead[CE]{Even}
+
+%\rfoot{\thepage}
+%\renewcommand{\headrulewidth}{2.5pt}
 
 \title{Book about Fancy Headers and Footers}
-\date{}
-\author{}
+\author{Jim Hessin}
+\date{December  1, 2019}
+
+% -- END PREAMBLE
+
 \begin{document}
 \maketitle
 In this lesson we'll learn how to make various types of headers and footers using "fancyhdr" package. Since we also want to practice different header and footer on odd and even pages, we are using book class.  
