@@ -7,6 +7,13 @@
 
 \pagestyle{fancy}
 
+\title{Book about Fancy Headers and Footers}
+\author{Jim Hessin}
+\date{December  1, 2019}
+
+\def\runauthor{Hessin}
+\def\runtitle{Fancy}
+
 % In the following this is the meaning of these characters
 
 % E - Even pages
@@ -22,14 +29,15 @@
 %\fancyhf{} %clear head and footer fields
 \fancyhead{} % clear all fields
 \fancyhead[LO,RE]{\thepage}
+\fancyhead[CO]{\runtitle}
+\fancyhead[CE]{\runauthor}
 % \lhead{This is Left side of my header}
-\chead{Hessin}
 % \rhead{Right of head}
 
 \fancyfoot{} % clear all fields
 % \lfoot{Left of footer}
-\cfoot{Hessin}
 % \rfoot{Right field of footer}
+\cfoot{\thepage}
 \renewcommand{\footrulewidth}{0.5pt}
 
 %\fancyhead[CO]{ODD}
@@ -37,10 +45,6 @@
 
 %\rfoot{\thepage}
 %\renewcommand{\headrulewidth}{2.5pt}
-
-\title{Book about Fancy Headers and Footers}
-\author{Jim Hessin}
-\date{December  1, 2019}
 
 % -- END PREAMBLE
 
