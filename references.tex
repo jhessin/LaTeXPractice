@@ -1,0 +1,59 @@
+\documentclass{article}
+%\usepackage{cite}
+
+\begin{document}
+\section{Introduction and Related Work}
+Representation of the environment of a mobile robot is of
+fundamental importance. If there is no prior information about the
+environment the the robot has to build this during the exploration.
+Over the past decade there has been a lot of work on map building
+for mobile robots. Some approaches use the landmarks (installed or
+natural) as a reference for map building while some use the relative
+positions of landmarks as invariant features for map building.  The
+major problem with all map building approaches is the data
+association problem also known as correspondence problem. This
+problem arises due to the fact that landmarks can not be identified
+uniquely. There always exist an uncertainty associated with it. Scan
+matching approaches are very popular for the purpose of map building
+and localization because of the efficiency. By merging laser scans
+at different locations, a more complete environment presentation can
+be obtained. Most of the scan matching methods are based on
+Iterative Closest Point  (ICP) algorithm \cite{Shewchuck},
+and its variants, the idea borrowed from vision community.
+  In the  field of robotics Lu and Milios described
+ a method of data association in their highly influential paper. They were
+the first to formulate the SLAM problem as a set of links between
+robot poses and to formulate a global optimization algorithm. A
+similar approach has been used by
+ for the localization of a  mail delivery robot. Another
+scan matching approach is presented by Biber\cite{minguez-metricbased} which is
+independent of the correspondence problem. Gutman
+used a combine scan matcher in AMOS project. Another
+ method  use the exhaustive search strategy for corresponding points
+ which can be used  as an initial alignment. Some other hybrid
+approaches for environment modelling are Pradalier
+Tomatis, Ortin, and Dufourd
+. Hough transform based approach of scan matching
+ are computationally very expensive. Some approaches
+ use Expectation Maximization (EM) Algorithm
+ to solve the data association problems in a hill
+climbing manner but these can not be implemented in an on-line
+fashion because EM algorithm requires multiple passes. The problem
+with iterative methods used in most of the scan matching methods is
+that those can not be used recursively in an efficient manner. This
+is the reason due to which scan matching approaches are sometimes
+considered incapable of handling large map building problems. We
+present a method which reduces the computational burden and suitable
+for real-time applications. Instead of finding a point to point
+correspondence like ICP, we extract straight lines from the laser
+scans and find the rotational and translational shifts for a proper
+match. This shift is then used to update the pose reported by the
+dead-reckoning. This reduces the computations by nearly a factor of
+ten. The beauty of our method is that it aligns the scan locally in
+a single iteration. For map building however, the global
+localization is achieved by formulating the geometrical constraints
+and solving those using conjugate gradient method.
+
+\bibliographystyle{ieeetr}
+\bibliography{MyReferences}
+\end{document} 
