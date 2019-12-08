@@ -1,6 +1,11 @@
 \documentclass{article}
 %\usepackage{cite}
 
+\linespread{1.2} % linespacing = 120%
+\parskip=1.2em % paragraph spacing is 120% of the height of M
+\parindent=3cm % the paragraph indent is 3cm
+\reversemarginpar % Margin notes appear on left
+
 \begin{document}
 \section{Introduction and Related Work}
 Representation of the environment of a mobile robot is of
@@ -20,6 +25,7 @@ at different locations, a more complete environment presentation can
 be obtained. Most of the scan matching methods are based on
 Iterative Closest Point  (ICP) algorithm \cite{Shewchuck},
 and its variants, the idea borrowed from vision community.
+
   In the  field of robotics Lu and Milios described
  a method of data association in their highly influential paper. They were
 the first to formulate the SLAM problem as a set of links between
@@ -32,7 +38,7 @@ used a combine scan matcher in AMOS project. Another
  method  use the exhaustive search strategy for corresponding points
  which can be used  as an initial alignment. Some other hybrid
 approaches for environment modelling are Pradalier
-Tomatis, Ortin, and Dufourd
+Tomatis, Ortin, and Dufourd \marginpar{Please insert video here}
 . Hough transform based approach of scan matching
  are computationally very expensive. Some approaches
  use Expectation Maximization (EM) Algorithm
@@ -45,15 +51,16 @@ is the reason due to which scan matching approaches are sometimes
 considered incapable of handling large map building problems. We
 present a method which reduces the computational burden and suitable
 for real-time applications. Instead of finding a point to point
-correspondence like ICP, we extract straight lines from the laser
+correspondence like ICP\footnote{Not to be confused with the Insane Clown
+Posse}, we extract straight lines from the laser
 scans and find the rotational and translational shifts for a proper
 match. This shift is then used to update the pose reported by the
 dead-reckoning. This reduces the computations by nearly a factor of
 ten. The beauty of our method is that it aligns the scan locally in
 a single iteration. For map building however, the global
 localization is achieved by formulating the geometrical constraints
-and solving those using conjugate gradient method.
+and solving those using conjugate gradient method.\cite{RAZA2019254}
 
 \bibliographystyle{ieeetr}
-\bibliography{MyReferences}
+\bibliography{references}
 \end{document} 
